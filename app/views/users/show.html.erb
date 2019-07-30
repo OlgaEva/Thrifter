@@ -1,0 +1,18 @@
+<h1> THRIFTER </h1>  <!-- This page should only be visible to the individual user -->
+
+<h2> Name: <%= @user.name %></h2>
+<hr>
+<h3> All Your Current Items For Sale: </h3>
+<ul>
+<% @user.items.each do |item| %>
+    <li><%= item %></li>
+    <% end %>
+    </ul>
+
+<hr>
+<h3> All Items You Have Purchased: </h3>
+<ul>
+<% @user.bought_items.each do |item| %>
+    <li><%= item %></li>
+    <% end %>
+    </ul>
