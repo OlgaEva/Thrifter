@@ -1,0 +1,32 @@
+<h1> THRIFTER </h1>  <!-- This page should only be visible to the individual user -->
+
+<h2> Name: <%= @user.name %></h2>
+<hr>
+<h3> All Items You Have Purchased: </h3>
+<ul>
+<% @user.bought_items.each do |item| %>
+    <li><%= item %></li>
+    <% end %>
+    </ul>
+    <hr>
+<h3> All Your Current Items For Sale: </h3>
+<ul>
+<% @user.items.each do |item| %>
+    <li><%= item %></li>
+    <% end %>
+    </ul>
+
+<h3> Post New Item: </h3>
+    <%= form_for @item do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :price %>
+        <%= f.number_field :price %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        <%= f.label :category %>
+        <%= f.text_field :category%>
+        <%= f.label :img_url %>
+        <%= f.text_field :img_url %>
+        <%= f.submit %>
+    <% end %>
