@@ -2,6 +2,12 @@
 
 <h2> A List of All Our Items </h2>
 
+<form method="get" action="/items">
+  <label for="name_input">Name:</label>
+  <input type="text" name="query" id="name_input" >
+  <input type="submit" value="Search!">
+</form>
+
 <ul><% @items.each do |item| %>
     <li><%= link_to item.name, item %> - <%= item.price %> - <%= item.description %></li>
     <% end %>
