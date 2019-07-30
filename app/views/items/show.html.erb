@@ -11,3 +11,5 @@
 <h3><%= @item.description %></h3>
 
 <%= @item.img_url %>
+
+<%= button_to "Delete Item", item_path(@item.id), method: :delete %>

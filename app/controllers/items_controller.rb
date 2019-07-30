@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
     end
 
     def create
+        byebug
         @item = Item.create(item_params)
         @seller = Seller.create(item_id: @item.id, user_id: @user_id)
         if @item.valid? && @seller.valid?

@@ -2,10 +2,10 @@
 
 <h2> Login Page </h2>
 
-<%= form tag "/login" do %>
-    <%= f.label :user_name %>
-    <%= f.text_field :user_name %>
-    <%= f.label :password %>
-    <%= f.password_field :password %> 
-    <%= f.submit %>
+<%= form_tag "/login" do %>
+    <%= label_tag :user_name %>
+    <%= text_field_tag :user_name %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %> 
+    <%= submit_tag "Login" %>
     <% end %> 
