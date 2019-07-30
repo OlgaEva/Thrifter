@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
 
     def create
         @item = Item.create(item_params)
-        @seller.create(seller_params)
+        @seller = Seller.create(item_id: @item.id, user_id: @user_id)
         if @item.valid? && @seller.valid?
             redirect_to item_path(@item.id)
         else

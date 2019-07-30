@@ -6,12 +6,14 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.label :price %>
-    <%= f.number_field %>
+    <%= f.number_field :price %>
     <%= f.label :description %>
     <%= f.text_field :description %>
     <%= f.label :category %>
-    <%= f.text_field %>
+    <%= f.text_field :category %>
     <%= f.label :img_url %>
     <%= f.text_field :img_url %>
+    <%= f.hidden_field :user_id, value: @user_id %>
+    <%= f.hidden_field :item_id, value: @item.id %>
     <%= f.submit %>
 <% end %>
