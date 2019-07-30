@@ -8,4 +8,5 @@ class User < ApplicationRecord
     has_many :buyers
     has_many :bought_items, through: :buyers, source: :item
 
+    has_secure_password
 end
