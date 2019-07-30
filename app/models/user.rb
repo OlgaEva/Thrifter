@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-    validates :user_name, presence: true
+    validates :user_name, :password, presence: true
 
     has_many :sellers
     has_many :items, through: :sellers
