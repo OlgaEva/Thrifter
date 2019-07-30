@@ -1,5 +1,5 @@
 class Seller < ApplicationRecord
     belongs_to :user
-    belongs_to :tem
+    belongs_to :item
 
 end
