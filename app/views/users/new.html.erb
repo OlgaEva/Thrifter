@@ -1,4 +1,13 @@
-<h1> THRIFTER </h1>
+
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |err| %>
+            <li>
+                <%= err %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
 
 <h2> Create a New User </h2>
 

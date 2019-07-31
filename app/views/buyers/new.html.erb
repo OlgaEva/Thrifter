@@ -8,6 +8,20 @@
 
 <h3><%= @item.description %></h3>
 
+<h3>Please Enter Payment Info</h3>
+<div>
+    <input type="text" value="enter card number"><br>
+    <input type="text" value="enter expiration date"><br>
+    <input type="text" value="enter CSV"><br>
+</div>
+<h3>Please Enter Shipping Info</h3>
+<div>
+    <input type="text" value="enter your address"><br>
+    <input type="text" value="address line 2"><br>
+    <input type="text" value="city"><br>
+    <input type="text" value="state"><br>
+    <input type="text" value="zipcode"><br>
+</div>
 <%= form_for @buyer do |f| %>
     <%= f.hidden_field :user_id, value: @user_id %>
     <%= f.hidden_field :item_id, value: @item.id %>

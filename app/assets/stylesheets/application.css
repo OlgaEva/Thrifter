@@ -14,6 +14,12 @@
  *= require_self
  */
 
+<<<<<<< HEAD
  body {
     background-image: ("app/assets/images/backgrounds/background-carpentry-construction-326333.jpg");
 } 
+=======
+ #logo{
+     font-family: 'Josefin Sans', sans-serif;
+ }
+>>>>>>> c4b5dc14ac1b7a4cea8cc8f5d39d760eaf06639c

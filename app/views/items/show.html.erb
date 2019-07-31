@@ -1,5 +1,3 @@
-<h1> THRIFTER </h1>
-
 
 
 <h2><%= @item.name %></h2>
@@ -11,7 +9,7 @@
 
 <h3><%= @item.description %></h3>
 
-<%= @item.img_url %>
+<%= image_tag @item.img_url %>
 
 
 <form method="get" action="/buyers/new">
