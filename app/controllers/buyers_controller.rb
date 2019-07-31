@@ -13,10 +13,14 @@ class BuyersController < ApplicationController
         redirect_to items_path
     end
 
+    def show
+        
+        end
+
     private
 
     def buyer_params
         params.require(:buyer).permit(:user_id, :item_id)
     end
-
+    
 end

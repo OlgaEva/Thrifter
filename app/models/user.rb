@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
-    validates :user_name, :password, presence: true, uniqueness: true
+    validates :user_name, presence: true, uniqueness: true
+    has_secure_password
 
     has_many :sellers
     has_many :items, through: :sellers
@@ -8,5 +9,5 @@ class User < ApplicationRecord
     has_many :buyers
     has_many :bought_items, through: :buyers, source: :item
 
-    has_secure_password
+
 end
