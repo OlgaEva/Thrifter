@@ -1,5 +1,5 @@
 class LoginController < ApplicationController
-#    skip_before_action :authorized, only: [:new, :create]
+    # skip_before_action :authorized, only: [:new, :create]
 
     def new 
 
@@ -8,7 +8,7 @@ class LoginController < ApplicationController
     def create
         @user = User.find_by(user_name: params[:user_name])
         if @user && @user.authenticate(params[:password])
-            flash["message"] = "Successfully logged in #{@user.name}!"
+            flash["message"] = "Successfully logged in #{@user.user_name}!"
             session[:user_id] = @user.id 
             redirect_to items_path
         else 
