@@ -1,9 +1,6 @@
-<h1> THRIFTER </h1>  <!-- This page should only be visible to the individual user -->
 
 <h2> Name: <%= @user.user_name %></h2>
 <hr>
-<h3> All Items You Have Purchased: </h3>
-<ul>
 
 <h3> All Your Current Items For Sale: </h3>
 <ul>
@@ -23,7 +20,8 @@
 <br>
 <%= link_to "Manage My Account", user_path %>
 <br>
-<%= button_to "Logout", "/logout", method: :delete %>
+<!-- Is this the logout path? -->
+<%= link_to "Logout", "/logout", method: :delete %>
 <br>
 
 </nav>
