@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
     def show
         find_user
+        byebug
     end
 
     def new 
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
     end
 
     def create 
-        @user = User.creat(user_params)
+        @user = User.create(user_params)
         if @user.valid?
             redirect_to user_path(@user.id)
         else

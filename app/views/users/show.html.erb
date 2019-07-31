@@ -1,6 +1,6 @@
 <h1> THRIFTER </h1>  <!-- This page should only be visible to the individual user -->
 
-<h2> Name: <%= @user.name %></h2>
+<h2> Name: <%= @user.user_name %></h2>
 <hr>
 <h3> All Items You Have Purchased: </h3>
 <ul>
@@ -30,3 +30,15 @@
         <%= f.text_field :img_url %>
         <%= f.submit %>
     <% end %>
+
+    <nav>
+    
+<%= link_to "Back to all Items", items_path %>
+<br>
+<%= link_to "Post a New Item for Sale", new_item_path %>
+<br>
+<!-- Is this the logout path? -->
+<%= link_to "Logout", "/logout" %>
+<br>
+
+</nav>

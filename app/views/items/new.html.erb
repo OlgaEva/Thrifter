@@ -1,6 +1,6 @@
 <h1>Post an Item for Sale!</h1>
 
-<%= link_to "Back to all Items", items_path %>
+
 
 <%= form_for @item do |f| %>
     <%= f.label :name %>
@@ -17,3 +17,19 @@
     <%= f.hidden_field :item_id, value: @item.id %>
     <%= f.submit %>
 <% end %>
+
+
+
+<nav>
+    
+<%= link_to "Back to all Items", items_path %>
+<br>
+<%= link_to "Post a New Item for Sale", new_item_path %>
+<br>
+<%= link_to "Manage My Account", user_path %>
+<br>
+<!-- Is this the logout path? -->
+<%= link_to "Logout", "/logout" %>
+<br>
+
+</nav>

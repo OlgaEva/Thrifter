@@ -1,8 +1,10 @@
 <h1> THRIFTER </h1>
 
-<%= link_to "Back", items_path %>
+
 
 <h2><%= @item.name %></h2>
+
+<h3><%= @item.category %></h3>
 
 <h3><%= @item.price %></h3>
 
@@ -11,3 +13,20 @@
 <h3><%= @item.description %></h3>
 
 <%= @item.img_url %>
+
+
+<%= button_to "Buy", <!-- more info here --> %> 
+
+<nav>
+    
+<%= link_to "Back to all Items", items_path %>
+<br>
+<%= link_to "Post a New Item for Sale", new_item_path %>
+<br>
+<%= link_to "Manage My Account", user_path %>
+<br>
+<!-- Is this the logout path? -->
+<%= link_to "Logout", "/logout" %>
+<br>
+
+</nav>

@@ -12,3 +12,18 @@
     <li><%= link_to item.name, item %> - <%= item.price %> - <%= item.description %></li>
     <% end %>
     </ul>
+
+
+
+
+    <nav>
+
+    <%= link_to "Post a New Item for Sale", "/new_item_path" %>
+    <br>
+    <%= link_to "Manage My Account", "/user_path" %>
+    <br>
+    <!-- Is this the logout path? -->
+    <%= link_to "Logout", "/logout" %>
+    <br>
+    
+    </nav>
