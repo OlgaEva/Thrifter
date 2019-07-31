@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
     def show
         find_user
-        byebug
     end
 
     def new 

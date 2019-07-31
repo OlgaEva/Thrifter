@@ -11,4 +11,17 @@
 <% @user.items.each do |item| %>
     <li><%= item.name %></li>
     <% end %>
-    </ul>
+</ul>
+
+<nav>
+<%= link_to "Back to all Items", items_path %>
+<br>
+<%= link_to "Post a New Item for Sale", new_item_path %>
+<br>
+<%= link_to "Manage My Account", user_path %>
+<br>
+<!-- Is this the logout path? -->
+<%= link_to "Logout", "/logout" %>
+<br>
+
+</nav>

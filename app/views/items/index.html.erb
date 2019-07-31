@@ -18,12 +18,12 @@
 
     <nav>
 
-    <%= link_to "Post a New Item for Sale", "/new_item_path" %>
+    <%= link_to "Post a New Item for Sale", new_item_path %>
     <br>
-    <%= link_to "Manage My Account", "/user_path" %>
+    <%= link_to "Manage My Account", user_path(@user_id) %>
     <br>
     <!-- Is this the logout path? -->
-    <%= link_to "Logout", "/logout" %>
+    <%= button_to "Logout", "/logout", method: :delete %>
     <br>
     
     </nav>
