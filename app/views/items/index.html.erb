@@ -13,6 +13,7 @@
   <input type="submit" value="Search!">
 </form>
 
+
 <div class="container">
     <% @sellers.each do |seller| %>
         <p><%= link_to seller.item.name, seller.item %><br>
