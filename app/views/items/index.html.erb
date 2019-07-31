@@ -8,8 +8,8 @@
   <input type="submit" value="Search!">
 </form>
 
-<ul><% @sellers.each do |seller| %>
-    <li><%= link_to seller.item.name, seller.item %> - <%= seller.item.price %> - <%= seller.item.description %></li>
+    <ul><% @sellers.each do |seller| %>
+      <li><%= link_to seller.item.name, seller.item %> - <%= seller.item.price %> - <%= seller.item.description %></li>
     <% end %>
     </ul>
 

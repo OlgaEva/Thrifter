@@ -2,7 +2,18 @@ class ItemsController < ApplicationController
     before_action :authorized 
 
     def index 
-        @sellers = Seller.all
+        #@sellers = Seller.all
+
+        if params[:query]
+
+            # @items = Item.where(name: params[:query])
+            # @sellers = Seller.where("name LIKE ?", "%#{params[:query]}%")
+            # @sellers = Seller.where("name LIKE ?","%#{params[:query]}%")  
+            @sellers = Seller.all.select { |seller| seller.item.name.include?(params[:query])  }
+          else
+            @sellers = Seller.all
+          end
+
     end
 
     def show
