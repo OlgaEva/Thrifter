@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-    # skip_before_action :authorized, only: [:new, :create]
+    before_action :authorized, only: [:show, :edit, :update, :destroy]
+
     def index
         @users = User.all 
     end
@@ -47,7 +48,7 @@ class UsersController < ApplicationController
     private
 
     def find_user
-        @user = User.find(params[:id])
+        @user = User.find(@user_id)
     end
 
     def user_params

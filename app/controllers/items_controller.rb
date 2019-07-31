@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
+    before_action :authorized 
 
     def index 
-        @items = Item.all 
+        @sellers = Seller.all
     end
 
     def show
@@ -41,6 +42,8 @@ class ItemsController < ApplicationController
 
     def destroy
         find_item
+        @seller = Seller.find_by(item_id: @item.id)
+        @seller.destroy
         @item.destroy 
         redirect_to items_path
     end
