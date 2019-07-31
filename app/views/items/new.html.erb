@@ -1,18 +1,26 @@
 <h1>Post an Item for Sale!</h1>
 
-
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |err| %>
+            <li>
+                <%= err %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
 
 <%= form_for @item do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :price %>
-    <%= f.number_field :price %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-    <%= f.label :category %>
-    <%= f.text_field :category %>
-    <%= f.label :img_url %>
-    <%= f.text_field :img_url %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+    <%= f.label :price %><br>
+    <%= f.number_field :price %><br>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %><br>
+    <%= f.label :category %><br>
+    <%= f.text_field :category %><br>
+    <%= f.label :img_url %><br>
+    <%= f.text_field :img_url %><br>
     <%= f.hidden_field :user_id, value: @user_id %>
     <%= f.hidden_field :item_id, value: @item.id %>
     <%= f.submit %>
@@ -28,8 +36,7 @@
 <br>
 <%= link_to "Manage My Account", user_path(@user_id) %>
 <br>
-<!-- Is this the logout path? -->
-<%= link_to "Logout", "/logout" %>
+<%= button_to "Logout", "/logout", method: :delete %>
 <br>
 
 </nav>

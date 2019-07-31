@@ -1,6 +1,10 @@
 class BuyersController < ApplicationController
     before_action :authorized
 
+    def show
+        @buyer = Buyer.find(params[:id])
+    end
+
     def new 
         @buyer = Buyer.new 
         @item = Item.find(params[:id])
@@ -11,7 +15,7 @@ class BuyersController < ApplicationController
         @buyer = Buyer.create(buyer_params)
         @seller = Seller.find_by(params[:item_id])
         @seller.delete
-        redirect_to items_path
+        redirect_to buyer_path(@buyer.id)
     end
 
     private

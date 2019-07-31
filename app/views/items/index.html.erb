@@ -1,5 +1,11 @@
 <h1> THRIFTER </h1>
 
+<% if flash[:message] %>
+    <p>
+        <%= flash[:message] %>
+    </p>
+<% end %>
+
 <h2> A List of All Our Items </h2>
 
 <form method="get" action="/items">
