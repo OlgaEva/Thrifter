@@ -1,0 +1,16 @@
+<h1>Buy this Item</h1>
+
+<%= image_tag @item.img_url %>
+
+<h2><%= @item.name %></h2>
+
+<h3><%= @item.price %></h3>
+
+<h3><%= @item.description %></h3>
+
+<%= form_for @buyer do |f| %>
+    <%= f.hidden_field :user_id, value: @user_id %>
+    <%= f.hidden_field :item_id, value: @item.id %>
+    <input type="hidden" value=<%= @seller %>>
+    <%= f.submit value: "Please Confirm" %>
+<% end %>

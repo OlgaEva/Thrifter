@@ -1,11 +1,10 @@
 <h1> THRIFTER </h1>
 
-
+<%= link_to "Back", items_path %>
 
 <h2><%= @item.name %></h2>
 
 <h3><%= @item.category %></h3>
-
 <h3><%= @item.price %></h3>
 
 <hr>
@@ -15,10 +14,13 @@
 <%= @item.img_url %>
 
 
+<form method="get" action="/buyers/new">
+<input type="hidden" name="id" value=<%= @item.id %>>
+<input type="submit" value="buy"/>
+</form>
 <%= button_to "Buy", <!-- more info here --> %> 
 
 <nav>
-    
 <%= link_to "Back to all Items", items_path %>
 <br>
 <%= link_to "Post a New Item for Sale", new_item_path %>

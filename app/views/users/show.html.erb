@@ -7,7 +7,7 @@
 
 <h3> All Your Current Items For Sale: </h3>
 <ul>
-<% byebug %>
+
 <% @user.items.each do |item| %>
     <li><%= item.name %></li>
     <% end %>
