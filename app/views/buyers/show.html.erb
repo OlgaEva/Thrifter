@@ -3,4 +3,12 @@
 
 <h3> Your Order Number is: <%= Array.new(9){rand 10}.join %></h3> 
 
-<%= link_to "Continue Shopping", items_path %>
+<nav>
+    <%= link_to "Continue Shopping", items_path, class: 'small_link' %>
+    <br>
+    <%= link_to "Post a New Item for Sale", new_item_path, class: 'small_link' %>
+    <br>
+    <%= link_to "Manage My Account", user_path, class: 'small_link' %>
+    <br>
+    <%= button_to "Logout", "/logout", method: :delete %>
+</nav>

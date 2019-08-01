@@ -1,12 +1,12 @@
 
 <h2> Login Page </h2>
-
+<div id="error_msg">
 <% if flash[:message] %>
     <p>
         <%= flash[:message] %>
     </p>
 <% end %>
-
+</div>
 <%= form_tag "/login" do %>
     <%= label_tag :user_name %>
     <%= text_field_tag :user_name %>

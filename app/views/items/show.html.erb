@@ -19,12 +19,11 @@
 </form>
 
 <nav>
-<%= link_to "Back to all Items", items_path %>
+<%= link_to "Back to all Items", items_path, class: 'small_link' %>
 <br>
-<%= link_to "Post a New Item for Sale", new_item_path %>
+<%= link_to "Post a New Item for Sale", new_item_path, class: 'small_link' %>
 <br>
-<%= link_to "Manage My Account", user_path %>
+<%= link_to "Manage My Account", user_path, class: 'small_link' %>
 <br>
 <%= button_to "Logout", "/logout", method: :delete %>
-<br>
 </nav>
