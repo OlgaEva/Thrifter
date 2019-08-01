@@ -14,14 +14,13 @@
 </ul>
 
 <nav>
-<%= link_to "Back to all Items", items_path %>
-<br>
-<%= link_to "Post a New Item for Sale", new_item_path %>
-<br>
-<%= link_to "Manage My Account", user_path %>
-<br>
-<!-- Is this the logout path? -->
-<%= button_to "Logout", "/logout", method: :delete %>
-<br>
-
+  <ul class="nav_links">
+    <li class="linked"><%= link_to "Back to all Items", items_path, class: 'small_link' %></li>
+    <br>
+    <li class="linked"><%= link_to "Post a New Item for Sale", new_item_path, class: 'small_link' %></li>
+    <br>
+    <li class="linked"><%= link_to "Manage My Account", user_path, class: 'small_link' %></li>
+    <br>
+    <%= button_to "Logout", "/logout", method: :delete %>
+    </ul>
 </nav>

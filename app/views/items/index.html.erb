@@ -1,10 +1,10 @@
-
+<div id="error_msg">
 <% if flash[:message] %>
     <p>
         <%= flash[:message] %>
     </p>
 <% end %>
-
+</div>
 <h2 id="logo"> All Items For Sale </h2>
 
 <form method="get" action="/items">
@@ -19,7 +19,7 @@
         <div class="sale_info"><p class="item_sale"><%= link_to seller.item.name, seller.item, class: "thumb_name" %><br>
         $ <%= seller.item.price %><br>
         <%= seller.item.description %><br>
-        <%= image_tag seller.item.img_url, class: 'thumbnail' %></p></div>
+       </p></div>
     <% end %>
 </div>
 
@@ -27,15 +27,11 @@
 
 
     <nav>
-    <%= link_to "Post a New Item for Sale", new_item_path %>
+    <%= link_to "Post a New Item for Sale", new_item_path, class: 'small_link' %>
     <br>
-    <%= link_to "Manage My Account", user_path(@user_id) %>
+    <%= link_to "Manage My Account", user_path(@user_id), class: 'small_link' %>
     <br>
-    <%= button_to "Logout", "/logout", method: :delete %>
+    <%= link_to "My Page", user_path(@user_id), class: 'small_link' %> 
     <br>
-    <%= link_to "My Page", user_path(@user_id) %>   
+    <%= button_to "Logout", "/logout", method: :delete %>  
     </nav>
-<<<<<<< HEAD
-
-=======
->>>>>>> e471e25713c752a41216867b57b6f31026d739a9
