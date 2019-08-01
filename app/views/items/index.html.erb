@@ -27,14 +27,12 @@
 
 
     <nav>
-
     <%= link_to "Post a New Item for Sale", new_item_path %>
     <br>
     <%= link_to "Manage My Account", user_path(@user_id) %>
     <br>
-    <!-- Is this the logout path? -->
     <%= button_to "Logout", "/logout", method: :delete %>
     <br>
-    
+    <%= link_to "My Page", user_path(@user_id) %>   
     </nav>
-<%= link_to "My Page", user_path(@user_id) %>
+
