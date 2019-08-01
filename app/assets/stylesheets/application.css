@@ -14,6 +14,7 @@
  *= require_self
  */
 
+<<<<<<< HEAD
 
  #logo{
      font-family: 'Josefin Sans', sans-serif;
@@ -49,3 +50,15 @@
       color: green;
   }
   
+=======
+ body {
+    background-image: url("https://i.ibb.co/QXFNzS5/backdrop-background-brown-129733.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+ #logo{
+     font-family: 'Josefin Sans', sans-serif;
+ }
+>>>>>>> 9d4df6ad5726dde0e6240eae817b3e81eb4ead9a
