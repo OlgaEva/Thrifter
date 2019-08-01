@@ -9,6 +9,7 @@
         <p>
             <div class='thumb_name'><%= link_to item.name, item_path(item) %></div>
             <%= button_to "Delete Item", item_path(item), method: :delete %>
+            <div class='edit'><%= link_to "Edit this Item", edit_item_path(item) %></div>
         </p>
         <% end %>
 </div>

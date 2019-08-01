@@ -92,4 +92,34 @@ nav {
     font-weight: strong;
   }
 
+  .edit{
+    width: 50%;
+    height: 120%;
+    border-radius: 20px;
+    margin: 10px;
+    margin-left: 15em;
+    -webkit-appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 1px 7px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-image: initial;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    -webkit-rtl-ordering: logical;
+    font: 400 11px system-ui;
+  }
 

@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
             # @items = Item.where(name: params[:query])
             # @sellers = Seller.where("name LIKE ?", "%#{params[:query]}%")
             # @sellers = Seller.where("name LIKE ?","%#{params[:query]}%")  
-            @sellers = Seller.all.select { |seller| seller.item.name.include?(params[:query])  }
+            @sellers = Seller.all.select { |seller| seller.item.name.downcase.include?(params[:query].downcase)  }
           else
             @sellers = Seller.all
           end
