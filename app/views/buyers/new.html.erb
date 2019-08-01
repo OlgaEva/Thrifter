@@ -1,7 +1,7 @@
 
 <h2>Buy this Item</h2>
 
-
+<div id='show_content'>
     <%= image_tag @item.img_url, class: 'product_img' %>
 
 
@@ -11,7 +11,7 @@
     <h3 class='product_show_info'>$<%= @item.price %></h3>
 
     <h3 class='product_show_info'>Description: <%= @item.description %></h3>
-
+</div>
 
 <h3 class='product_show_name'>Please Enter Payment Info</h3>
 <form>

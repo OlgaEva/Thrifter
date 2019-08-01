@@ -3,24 +3,23 @@
 <hr>
 
 <h3> All Your Current Items For Sale: </h3>
-<ul>
 
-<% @user.items.each do |item| %>
-    <li>
-        <%= item.name %>
-        <%= button_to "Delete Item", item_path(item), method: :delete %>
-    </li>
-    <% end %>
-</ul>
-
+<div id='show_content'>
+    <% @user.items.each do |item| %>
+        <p>
+            <div class='thumb_name'><%= link_to item.name, item_path(item) %></div>
+            <%= button_to "Delete Item", item_path(item), method: :delete %>
+        </p>
+        <% end %>
+</div>
 <nav>
-  <ul class="nav_links">
-    <li class="linked"><%= link_to "Back to all Items", items_path, class: 'small_link' %></li>
+  
+   <%= link_to "Back to all Items", items_path, class: 'small_link' %>
     <br>
-    <li class="linked"><%= link_to "Post a New Item for Sale", new_item_path, class: 'small_link' %></li>
+   <%= link_to "Post a New Item for Sale", new_item_path, class: 'small_link' %>
     <br>
-    <li class="linked"><%= link_to "Manage My Account", user_path, class: 'small_link' %></li>
+   <%= link_to "Manage My Account", user_path, class: 'small_link' %>
     <br>
     <%= button_to "Logout", "/logout", method: :delete %>
-    </ul>
+    
 </nav>
