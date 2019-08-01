@@ -12,8 +12,10 @@ class BuyersController < ApplicationController
     end
 
     def create
+        byebug
+        @item = Item.find(params[:buyer][:item_id]) 
         @buyer = Buyer.create(buyer_params)
-        @seller = Seller.find_by(params[:item_id])
+        @seller = Seller.find_by(item: @item)
         @seller.delete
         redirect_to buyer_path(@buyer.id)
     end

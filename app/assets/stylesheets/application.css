@@ -14,12 +14,38 @@
  *= require_self
  */
 
-<<<<<<< HEAD
- body {
-    background-image: ("app/assets/images/backgrounds/background-carpentry-construction-326333.jpg");
-} 
-=======
+
  #logo{
      font-family: 'Josefin Sans', sans-serif;
- }
->>>>>>> c4b5dc14ac1b7a4cea8cc8f5d39d760eaf06639c
+     text-align: center;
+  }
+
+  .container{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+  }
+
+  .item_sale{
+      margin: 2em;
+      justify-content: space-around;
+  }
+
+  .thumbnail{
+      height: 13em;
+      border-radius: 1em;
+  }
+
+  .thumb_name{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5em;
+  }
+
+  .sale_info{
+      flex-direction: column;
+  }
+
+  .price{
+      color: green;
+  }
+  
