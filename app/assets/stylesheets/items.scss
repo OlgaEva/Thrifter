@@ -1,3 +1,68 @@
-// Place all the styles related to the Items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center; // dan's original code
+    // justify-content: center; // dan's original code
+}
+
+.item_sale{
+    padding: 2em;
+    max-width: 6em;
+    background-color: aliceblue;
+    border-radius: 1em;
+    margin: 2em;
+    justify-content: space-around;
+    flex: 0 0 33.33333%; // john's change
+    font-size: 1.3em; // john's change
+}
+
+.thumbnail{
+    // height: 13em; // dan's original code
+    max-width: 5em; // John's change
+    border-radius: 1em;
+    align-content: center;
+    padding: 1em;
+}
+
+.thumb_name{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+}
+
+.sale_info{
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+.product_img{
+    
+    width: 40em;
+    border-radius: 2em;
+}
+
+.product_img img {
+    margin: 0 auto;
+}
+
+#show_content {
+    width: 660px;
+    margin:0 auto;
+}
+
+.product_show_name{
+    font-size: 5em;
+    color: white;
+}
+
+.product_show_info{
+    font-size: 2.5em;
+    color: black;
+    background-color: white;
+    border-radius: 1em;
+}
+.product_show_desc{
+    font-size: 1.5em;
+    color: black;
+    background-color: white;
+    border-radius: 1em;
+}
