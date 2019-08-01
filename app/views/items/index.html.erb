@@ -5,7 +5,7 @@
     </p>
 <% end %>
 
-<h2> A List of All Our Items </h2>
+<h2 id="logo"> All Items For Sale </h2>
 
 <form method="get" action="/items">
   <label for="name_input">Name:</label>
@@ -16,10 +16,10 @@
 
 <div class="container">
     <% @sellers.each do |seller| %>
-        <p><%= link_to seller.item.name, seller.item %><br>
+        <div class="sale_info"><p class="item_sale"><%= link_to seller.item.name, seller.item, class: "thumb_name" %><br>
         $ <%= seller.item.price %><br>
         <%= seller.item.description %><br>
-        <%= image_tag seller.item.img_url %></p>
+        <%= image_tag seller.item.img_url, class: 'thumbnail' %></p></div>
     <% end %>
 </div>
 
@@ -35,4 +35,7 @@
     <br>
     <%= link_to "My Page", user_path(@user_id) %>   
     </nav>
+<<<<<<< HEAD
 
+=======
+>>>>>>> e471e25713c752a41216867b57b6f31026d739a9
